@@ -1,10 +1,10 @@
 name: Debug
 on:
   pull_request:
-    types: [opened, synchronize, closed]
+    types: [opened,synchronize,closed]
 jobs:
   output-debug:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-18:04
     steps:
       - uses: nilledev/github-action-explore-debug@main
         with:
