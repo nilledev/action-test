@@ -1,0 +1,18 @@
+name: Pull Request Milestone
+on:
+  pull_request:
+    types: [closed]
+jobs:
+  milestone:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions-book/github-action-pull-request-milestone-toolkit@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          merged_1: "Your first PR! We're glad to have you on board"
+          merged_2: "Two in a row? Thanks for coming back to us"
+          merged_5: "5? FIVE!? Do you work here or something? Thanks for all the contributions"
+          merged_13: "Unlucky for some? Not for us! That's 13 PRs merged, keep it up!"
+          merged_50: "That's half a century for you. Do the same again and let's see what happens!"
+          merged_100: "100 merged PRs? You're the best. Raise an issue and we'll send you some swag"
